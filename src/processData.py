@@ -12,6 +12,7 @@ def loadCleanData(csvPath: str) -> pd.DataFrame:
     # Clean the dataset and display its head
     print("Cleaning the dataset...")
     df = df_whole[['DATE', 'TMAX']].copy() # Select only the 'DATE' and 'TMAX' columns for analysis
+    df['DATE'] = pd.to_datetime(df['DATE']) # Convert 'DATE' column to datetime format
     print("Dataset cleaned. Here are the first few rows of the cleaned dataset:")
     print(df.head())
 

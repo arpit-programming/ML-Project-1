@@ -17,7 +17,7 @@ def main():
     plotMeanAndMedian(agg)
 
     # Get user input as a day of year for Naive Prediction
-    userInputNaive = getUserInputNaive() # Prompt the user to enter a date in DD-MM format, convert it to day of year, and return the day of year as an integer
+    userInputNaive = getUserInputNaive(agg) # Prompt the user to enter a date in DD-MM format, convert it to day of year, and return the day of year as an integer
 
 if __name__ == "__main__":
     main()
