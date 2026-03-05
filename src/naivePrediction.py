@@ -1,6 +1,6 @@
 import pandas as pd
 
-def getUserInputNaive(agg: pd.DataFrame) -> float:
+def naivePrediction(agg: pd.DataFrame) -> float:
     userInput = input("Enter a date (DD-MM) - Cannot be February 29: ") # Prompt the user to enter a date in the format DD-MM
     try:
         input_date = pd.to_datetime(userInput, format="%d-%m") # Convert the user input to a datetime object using the specified format
@@ -12,4 +12,4 @@ def getUserInputNaive(agg: pd.DataFrame) -> float:
     except ValueError:
         print("Invalid date format. Please enter the date in DD-MM format.")
         exit()
-    return doy_input
+    return meanTemp
